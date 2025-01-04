@@ -64,6 +64,7 @@ const App = () => {
         );
         if (foundUser ) {
           setUser (foundUser ); // Lưu thông tin người dùng đăng nhập
+          alert('Đăng nhập thành công!');
           navigate('/products/list'); // Chuyển hướng đến trang danh sách sản phẩm
         } else {
           alert('Tên đăng nhập hoặc mật khẩu không đúng');
@@ -93,6 +94,7 @@ const App = () => {
   const onLogout = () => {
     setUser (null); // Xóa thông tin người dùng
     navigate('/login'); // Chuyển hướng về trang đăng nhập
+    alert('Đăng xuất thành công!');
   };
   return (
     <Routes>
