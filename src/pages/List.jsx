@@ -1,10 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 const List = (props) => {
-    const {products, onDel} = props
+    const {products, onDel, onLogout } = props
   return (
     <div className='container mx-auto p-4'>
       <Link to={`/products/add`}><button className='px-4 py-2 border border-black mb-4'>Add products</button></Link>
+      <button
+          onClick={onLogout} // Gọi hàm onLogout khi nhấn nút
+          className="px-4 py-2 border border-black bg-red-500 text-white"
+        >
+          Logout
+        </button>
       <table className='border border-black '>
         <thead>
             <tr>
